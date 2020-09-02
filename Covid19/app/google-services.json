@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1090178939668",
+    "firebase_url": "https://covid19hack-81596.firebaseio.com",
+    "project_id": "covid19hack-81596",
+    "storage_bucket": "covid19hack-81596.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090178939668:android:bad78d7526ea707c486001",
+        "android_client_info": {
+          "package_name": "com.example.covid_19"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090178939668-1dabhhqcvl93gus2srd7oqhnkbui8u3i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.covid_19",
+            "certificate_hash": "a7a2de3070a537d8c211f6c0fa6b213e70b94568"
+          }
+        },
+        {
+          "client_id": "1090178939668-98pgqs2b7fmlrqd8ncb7q14dlqhov5vc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP4blgEF5dkvaIY52cR2MFD5bSy9yHKiU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1090178939668-98pgqs2b7fmlrqd8ncb7q14dlqhov5vc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

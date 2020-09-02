@@ -1,0 +1,154 @@
+
+{%extends 'index.html'%}
+
+
+{% block extra %}
+
+
+
+
+{% endblock %}
+
+
+{% load static %}
+
+
+{% block content %}
+
+
+<div class="row">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="row"> </th>  
+      <th scope="col">Type</th>
+      <th scope="col">Detail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Name</td>
+      <td>{{name}}</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Phone</td>
+      <td>{{phone}}</td>
+
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Location "x"</td>
+      <td>{{locx}}</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>Location "y"</td>
+      <td>{{locy}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+
+
+
+<div class="row">
+
+<div class = col >
+    <div class="card border-secondary mb-3" style="max-width: 18rem;">
+        <div class="card-header">Photos Uploaded</div>
+        <div class="card-body text-secondary">
+          <form action="photo" method="POST" >
+            {% csrf_token %}
+    
+            <input type="hidden" name="userid" value={{im}} >
+            <input type="hidden" name="admin" value={{id}} >
+            Count : 
+            <input  class="btn" type="submit" value={{countphoto}} >
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="col">
+
+
+      <div class="card border-secondary mb-3" style="max-width: 18rem;">
+        <div class="card-header">Locations Uploaded</div>
+        <div class="card-body text-secondary">
+          <form action="locations" method="POST" >
+          {% csrf_token %}
+  
+          <input type="hidden" name="userid" value={{im}} >
+          <input type="hidden" name="admin" value={{id}} >
+          Count : 
+          <input  class="btn" type="submit" value={{countmap}} >
+        </form>
+        </td>
+        
+                </tr>
+        
+        
+
+
+            
+          
+        </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col">
+
+      <div class="card border-secondary mb-3" style="max-width: 18rem;  padding: 1rex">
+        <div class="card-header">Temperature  Uploaded</div>
+        <div class="card-body text-secondary">
+          <form action="temperature" method="POST" >
+            {% csrf_token %}
+    
+            <input type="hidden" name="userid" value={{im}} >
+            <input type="hidden" name="admin" value={{id}} >
+            Count : 
+            <input  class="btn" type="submit" value= {{countphoto}} >
+          </form>  
+          
+          
+        </a>
+        </div>
+    </div>
+      </div>
+
+
+</div>
+
+
+
+
+
+
+
+{% block ok %}
+
+
+
+
+{% endblock %}
+      
+
+
+
+
+
+
+
+
+
+{% endblock %}   

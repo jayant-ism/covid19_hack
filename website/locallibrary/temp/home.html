@@ -1,0 +1,119 @@
+  {% extends 'index.html'%}
+
+
+    {% load static %}
+
+{% block idd %}
+
+<form action="ref"  class="card-body" method="POST">
+  {% csrf_token %}
+  
+  <input type="hidden" name="admin" value= {{id}} >
+  <input  class="btn btn-primary" type="submit" value= {{id}} >
+</form>
+
+    <i class="fas fa-fw fa-tachometer-alt"></i>
+  
+</a>
+
+
+<form action="sub" method="POST">
+  {% csrf_token %}
+  
+  <input type="hidden" name="id" value={{id}} >
+  <input  class="btn btn-primary" type="submit" value="LOG OUT"  />
+</form>
+    <span></span>
+
+     {% endblock %}   
+       
+
+    {% block content %}
+    <div class="row"></div>
+          <!-- Pie Chart -->
+
+        
+        </div>
+
+        <!-- Content Row -->
+        <div class="row">
+
+          <!-- Content Column -->
+          <div class="col-lg-6 mb-4">
+
+            
+            <!-- Color System -->
+            <div class="row">
+              <div class="col-lg-6 mb-4">
+                <div class="card bg-primary text-white shadow">
+
+                    <div   class="card-body">
+                    
+                    details         
+                    
+                    <form action="details"  class="card-body" method="POST">
+                      {% csrf_token %}
+                      
+                      <input type="hidden" name="admin" value={{id}} >
+                      <input   class="btn btn-primary" type="submit" value="Check it"  >
+                    </form>
+
+                </div>
+            
+                </div>
+            
+                
+                
+              </div>
+
+              <div class="col-lg-6 mb-4">
+                <div class="card bg-success text-white shadow">
+                  <div class="card-body">
+                    NOTUPLOADED PIC
+                    <form action="notuploc"  class="card-body" method="POST">
+                      {% csrf_token %}
+                      
+                      <input type="hidden" name="admin" value={{id}}/>
+                      <input   class="btn btn-success" type="submit" value="Check it"  >
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 mb-4">
+                <div class="card bg-info text-white shadow">
+                  <div class="card-body">
+                    notupphoto
+                    <form action="notupphoto"  class="card-body" method="POST">
+                      {% csrf_token %}
+                      
+                      <input type="hidden" name="admin" value={{id}}/>
+                      <input   class="btn btn-info" type="submit" value="Check it"  >
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 mb-4">
+                <div class="card bg-warning text-white shadow">
+                  <div class="card-body">
+                    Action must be taken
+                    
+                    <form action="action"  class="card-body" method="POST">
+                      {% csrf_token %}
+                      
+                      <input type="hidden" name="admin" value={{id}}/>
+                      <input   class="btn btn-warning" type="submit" value="Check it"  >
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+              
+          </div>
+
+          </div>
+
+
+        </div>
+{% endblock   %} 
